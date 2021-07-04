@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Change-Color</title>
+    </head>
+    <body id = "bd">
+        <button id = "demo">Change Color</button>
+    </body>
+    <script>
+       const btn = document.getElementById("demo");
+       function random(number) {
+            return Math.floor(Math.random()*(number+1));
+        }
+        const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+       btn.onclick = function() {
+            const cur = document.getElementById("bd");
+            cur.style.backgroundColor = rndCol;
+       } 
+       setInterval(onclick, 1000);
+    </script>
+
+
+</html>
